@@ -23,7 +23,7 @@ function correctBlock () {
   document.getElementById('colorText').textContent = rgbArray[num]
 }
 
-document.getElementById('colorButton').addEventListener('click', function () {
+function generateColors () {
   for (var i = 0; i < colorBlocks.length; i++) {
     randomRGB()
     var rgb = 'rgb(' + r + ',' + g + ',' + b + ')'
@@ -31,4 +31,13 @@ document.getElementById('colorButton').addEventListener('click', function () {
     rgbArray.push(rgb)
   }
   correctBlock();
+}
+
+document.getElementById('colorButton').addEventListener('click', function () {
+  generateColors();
 })
+
+window.onload = function () {
+  generateColors();
+}
+
