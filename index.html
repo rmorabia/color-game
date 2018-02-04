@@ -1,17 +1,58 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Color Game Project</title>
-  </head>
-  <body>
-    <button id="colorButton">press this button to change the color</button>
-    <h1>the color is: <span id="colorText">null</span></h1>
-    <p id="viewColor1">color 1</p>
-    <p id="viewColor2">color 2</p>
-    <p id="viewColor3">color 3</p>
-    <p id="viewColor4">color 4</p>
-    <p id="viewColor5">color 5</p>
-    <p id="viewColor6">color 6</p>
-  </body>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Color Game Project</title>
+</head>
+
+<body>
+  <header>
+    <h1>Color Game</h1>
+    <h2>Your Color Is:</h2>
+    <h5>
+      <span id="colorText">null</span>
+    </h5>
+    <div class="bar">
+      <div class="container">
+        <nav class="navbar">
+          <div class="navbar-header">
+            <a id="colorButton">New Colors</a>
+          </div>
+          <div class="navbar-brand" id="results">Click A Color</div>
+          <div class="navbar-right">
+            <a id="easyMode">Easy</a>
+            <a id="hardMode">Hard</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="boxes">
+      <div class="row">
+        <div class="box col" id="viewColor1"></div>
+        <div class="box col" id="viewColor2"></div>
+        <div class="box col" id="viewColor3"></div>
+      </div>
+      <div class="row">
+        <div class="box col" id="viewColor4"></div>
+        <div class="box col" id="viewColor5"></div>
+        <div class="box col" id="viewColor6"></div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
   <script src="script.js"></script>
+</body>
+
 </html>

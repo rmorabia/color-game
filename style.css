@@ -1,0 +1,76 @@
+/*
+Full Page
+*/
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+h5 {
+    font-size: 2.5rem;
+}
+
+/*
+Header
+*/
+
+header {
+    text-align: center;
+    background-color: #32b643;
+}
+
+/*
+Nav Bar
+*/
+
+.bar {
+    background-color: #cbedd0;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #32b643;
+}
+
+a:not([href]):not([tabindex]) {
+    padding: 0 1rem;
+}
+
+a:not([href]):not([tabindex]):hover {
+    background-color: #32b643;
+    color: #cbedd0;
+    padding: .9rem 1rem;
+}
+
+a:not([href]):not([taxindex]):active {
+    background-color: #32b643;
+    color: #cbedd0;
+    padding: .9rem 1rem;
+}
+
+.hardToggle:not([href]):not([taxindex]) {
+    background-color: #32b643;
+    color: #cbedd0;
+    padding: .9rem 1rem;
+}
+
+.easyToggle:not([href]):not([taxindex]) {
+    background-color: #32b643;
+    color: #cbedd0;
+    padding: .9rem 1rem;
+}
+
+/* 
+Boxes
+*/
+
+.boxes {
+    margin-top: 20px;
+}
+
+.box {
+    width: 30%;
+    padding-bottom: 30%;
+    margin: 10px;
+    border-radius: 10%;
+}
