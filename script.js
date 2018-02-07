@@ -19,18 +19,18 @@ easyBlocks[0] = document.getElementById('viewColor1')
 easyBlocks[1] = document.getElementById('viewColor2')
 easyBlocks[2] = document.getElementById('viewColor3')
 
-function randomRGB() {
+function randomRGB () {
   r = Math.floor(Math.random() * 256)
   g = Math.floor(Math.random() * 256)
   b = Math.floor(Math.random() * 256)
 }
 
-function correctBlock() {
+function correctBlock () {
   var num = (Math.floor(Math.random() * 6))
   document.getElementById('colorText').textContent = rgbArray[num]
 }
 
-function generateColors() {
+function generateColors () {
   for (var i = 0; i < colorBlocks.length; i++) {
     randomRGB()
     var rgb = 'RGB(' + r + ', ' + g + ', ' + b + ')'
@@ -56,7 +56,7 @@ document.getElementById('colorButton').addEventListener('click', function () {
 
 window.onload = function () {
   generateColors()
-  document.querySelector('#hardMode').classList.add("hardToggle")
+  document.querySelector('#hardMode').classList.add('hardToggle')
 }
 
 document.getElementById('hardMode').addEventListener('click', function () {
@@ -74,11 +74,11 @@ document.getElementById('easyMode').addEventListener('click', function () {
   document.getElementById('results').textContent = 'Click A Color'
 })
 
-function easyMode() {
+function easyMode () {
   hardMode = false
   rgbArray.length = 0
   for (var i = 0; i < easyBlocks.length; i++) {
-    randomRGB();
+    randomRGB()
     var rgb = 'RGB(' + r + ', ' + g + ', ' + b + ')'
     easyBlocks[i].style.backgroundColor = rgb
     rgbArray.push(rgb)
@@ -88,26 +88,25 @@ function easyMode() {
   easyVisibility()
 }
 
-function easyVisibility() {
-  document.querySelector('#viewColor4').style.visibility = "hidden"
-  document.querySelector('#viewColor5').style.visibility = "hidden"
-  document.querySelector('#viewColor6').style.visibility = "hidden"
-  document.querySelector('#easyMode').classList.add("easyToggle")
-  document.querySelector('#hardMode').classList.remove("hardToggle")
+function easyVisibility () {
+  document.querySelector('#viewColor4').style.visibility = 'hidden'
+  document.querySelector('#viewColor5').style.visibility = 'hidden'
+  document.querySelector('#viewColor6').style.visibility = 'hidden'
+  document.querySelector('#easyMode').classList.add('easyToggle')
+  document.querySelector('#hardMode').classList.remove('hardToggle')
 }
 
-function hardVisibility() {
-  document.querySelector('#viewColor4').style.visibility = "visible"
-  document.querySelector('#viewColor5').style.visibility = "visible"
-  document.querySelector('#viewColor6').style.visibility = "visible"
-  document.querySelector('#hardMode').classList.add("hardToggle")
-  document.querySelector('#easyMode').classList.remove("easyToggle")
+function hardVisibility () {
+  document.querySelector('#viewColor4').style.visibility = 'visible'
+  document.querySelector('#viewColor5').style.visibility = 'visible'
+  document.querySelector('#viewColor6').style.visibility = 'visible'
+  document.querySelector('#hardMode').classList.add('hardToggle')
+  document.querySelector('#easyMode').classList.remove('easyToggle')
 }
-
 
 colorBlocks[0].addEventListener('click', function () {
-  if (rgbArray[0] == document.getElementById('colorText').textContent) {
-    document.getElementById('results').textContent = "Correct"
+  if (rgbArray[0] === document.getElementById('colorText').textContent) {
+    document.getElementById('results').textContent = 'Correct'
     for (var i = 0; i < rgbArray.length; i++) {
       rgbArray[i] = document.getElementById('colorText').textContent
     }
@@ -117,13 +116,13 @@ colorBlocks[0].addEventListener('click', function () {
     document.querySelector('header').style.backgroundColor = document.getElementById('colorText').textContent
   } else {
     colorBlocks[0].style.backgroundColor = 'RGB(0, 0, 0)'
-    document.getElementById('results').textContent = "Try Again"
+    document.getElementById('results').textContent = 'Try Again'
   }
 })
 
 colorBlocks[1].addEventListener('click', function () {
-  if (rgbArray[1] == document.getElementById('colorText').textContent) {
-    document.getElementById('results').textContent = "Correct"
+  if (rgbArray[1] === document.getElementById('colorText').textContent) {
+    document.getElementById('results').textContent = 'Correct'
     for (var i = 0; i < rgbArray.length; i++) {
       rgbArray[i] = document.getElementById('colorText').textContent
     }
@@ -133,13 +132,13 @@ colorBlocks[1].addEventListener('click', function () {
     document.querySelector('header').style.backgroundColor = document.getElementById('colorText').textContent
   } else {
     colorBlocks[1].style.backgroundColor = 'RGB(0, 0, 0)'
-    document.getElementById('results').textContent = "Try Again"
+    document.getElementById('results').textContent = 'Try Again'
   }
 })
 
 colorBlocks[2].addEventListener('click', function () {
-  if (rgbArray[2] == document.getElementById('colorText').textContent) {
-    document.getElementById('results').textContent = "Correct"
+  if (rgbArray[2] === document.getElementById('colorText').textContent) {
+    document.getElementById('results').textContent = 'Correct'
     for (var i = 0; i < rgbArray.length; i++) {
       rgbArray[i] = document.getElementById('colorText').textContent
     }
@@ -149,13 +148,13 @@ colorBlocks[2].addEventListener('click', function () {
     document.querySelector('header').style.backgroundColor = document.getElementById('colorText').textContent
   } else {
     colorBlocks[2].style.backgroundColor = 'RGB(0, 0, 0)'
-    document.getElementById('results').textContent = "Try Again"
+    document.getElementById('results').textContent = 'Try Again'
   }
 })
 
 colorBlocks[3].addEventListener('click', function () {
-  if (rgbArray[3] == document.getElementById('colorText').textContent) {
-    document.getElementById('results').textContent = "Correct"
+  if (rgbArray[3] === document.getElementById('colorText').textContent) {
+    document.getElementById('results').textContent = 'Correct'
     for (var i = 0; i < rgbArray.length; i++) {
       rgbArray[i] = document.getElementById('colorText').textContent
     }
@@ -165,13 +164,13 @@ colorBlocks[3].addEventListener('click', function () {
     document.querySelector('header').style.backgroundColor = document.getElementById('colorText').textContent
   } else {
     colorBlocks[3].style.backgroundColor = 'RGB(0, 0, 0)'
-    document.getElementById('results').textContent = "Try Again"
+    document.getElementById('results').textContent = 'Try Again'
   }
 })
 
 colorBlocks[4].addEventListener('click', function () {
-  if (rgbArray[4] == document.getElementById('colorText').textContent) {
-    document.getElementById('results').textContent = "Correct"
+  if (rgbArray[4] === document.getElementById('colorText').textContent) {
+    document.getElementById('results').textContent = 'Correct'
     for (var i = 0; i < rgbArray.length; i++) {
       rgbArray[i] = document.getElementById('colorText').textContent
     }
@@ -181,13 +180,13 @@ colorBlocks[4].addEventListener('click', function () {
     document.querySelector('header').style.backgroundColor = document.getElementById('colorText').textContent
   } else {
     colorBlocks[4].style.backgroundColor = 'RGB(0, 0, 0)'
-    document.getElementById('results').textContent = "Try Again"
+    document.getElementById('results').textContent = 'Try Again'
   }
 })
 
 colorBlocks[5].addEventListener('click', function () {
-  if (rgbArray[5] == document.getElementById('colorText').textContent) {
-    document.getElementById('results').textContent = "Correct"
+  if (rgbArray[5] === document.getElementById('colorText').textContent) {
+    document.getElementById('results').textContent = 'Correct'
     for (var i = 0; i < rgbArray.length; i++) {
       rgbArray[i] = document.getElementById('colorText').textContent
     }
@@ -197,6 +196,6 @@ colorBlocks[5].addEventListener('click', function () {
     document.querySelector('header').style.backgroundColor = document.getElementById('colorText').textContent
   } else {
     colorBlocks[5].style.backgroundColor = 'RGB(0, 0, 0)'
-    document.getElementById('results').textContent = "Try Again"
+    document.getElementById('results').textContent = 'Try Again'
   }
 })
